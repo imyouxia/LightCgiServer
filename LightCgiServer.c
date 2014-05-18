@@ -983,7 +983,7 @@ void *handleRequest(void *socket)
 			return NULL;
 		}
 
-		// 判断是否是目录，此处需要修改
+		// 判断是否是目录
 		struct stat Stats;
 		if(stat(request_header->_filename,&Stats) == 0 && S_ISDIR(Stats.st_mode))
 		{

@@ -1,0 +1,63 @@
+一、操作系统是Ubuntu下的操作步骤
+1.net-snmp的安装
+（1）tar xzvf net-snmp-5.7.2.tar.gz
+（2）cd net-snmp-5.7.2
+（3）安装依赖环境
+sudo apt-get install libperl-dev
+（4）配置net-snmp
+./configure –prefix=/usr/local/snmp –with-mib-modules=ucd-snmp/diskio
+（5）编译并安装
+make
+sudo make install
+（6）配置文件 snmpd.conf
+sudo cp EXAMPLE.conf /usr/local/snmp/share/snmp/snmpd.conf
+（7）sudo apt-get install snmpd
+（8）service snmp restart
+
+2.libmysql的安装
+（1）安装mysql服务端：sudo apt-get install mysql-server
+（2）安装Mysql客户端：sudo apt-get install mysql-client
+（3）安装Mysql开发工具：sudo apt-get install libmysqlclient-dev
+（4）sudo ldconfig -v
+
+3.cron定时任务
+vim /etc/crontab之后输入
+0 1 * * * findtopo位置/findtopo
+
+
+二、操作系统是Centos下的操作步骤
+
+1.net-snmp的安装
+（1）tar xzvf net-snmp-5.7.2.tar.gz
+（2）cd net-snmp-5.7.2
+（3）配置net-snmp
+./configure --prefix=/usr/local/snmp –with-mib-modules=ucd-snmp/diskio
+（4）编译并安装
+make
+make install
+（5）配置文件 snmpd.conf
+sudo cp EXAMPLE.conf /usr/local/snmp/share/snmp/snmpd.conf
+（6）service snmpd restart
+
+2.libmysql的安装
+64位系统：
+	rpm -ivh mysql-connector-c-devel-6.1.1-1.linux_glibc2.5.x86_64.rpm
+	rpm -ivh mysql-connector-c-shared-6.1.1-1.linux_glibc2.5.x86_64.rpm
+32位系统：
+	rpm -ivh mysql-connector-c-devel-6.1.1-1.linux_glibc2.5.i386.rpm
+	rpm -ivh mysql-connector-c-shared-6.1.1-1.linux_glibc2.5.i386.rpm
+
+service mysql start
+
+3.cron定时任务
+1.安装crontab
+yum install vixie-cron
+yum install crontabs
+
+2.设置cron开机启动
+service crond restart
+chkconfig –-level 35 crond on
+
+0 1 * * * findtopo位置/findtopo
+
+

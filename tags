@@ -1,0 +1,65 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CGI_POST	LightCgiServer.h	62;"	d
+HEADER_SIZE	LightCgiServer.h	60;"	d
+HTML_SIZE	LightCgiServer.h	63;"	d
+LightCgiServer_H_	LightCgiServer.h	2;"	d
+PAGES	LightCgiServer.h	64;"	d
+PORT	LightCgiServer.h	59;"	d
+QUEUE_SIZE	LightCgiServer.h	61;"	d
+_filename	LightCgiServer.h	/^	char* _filename;   \/\/FileName relative to server$/;"	m	struct:_request_h
+_queue	LightCgiServer.h	/^typedef struct _queue$/;"	s
+_request_h	LightCgiServer.h	/^typedef struct _request_h$/;"	s
+allSize	LightCgiServer.h	/^	unsigned int allSize;$/;"	m	struct:_queue
+alloc_queue	LightCgiServer.c	/^queue_t* alloc_queue()$/;"	f
+buf	LightCgiServer.h	/^	void **buf;$/;"	m	struct:_queue
+c_cookie	LightCgiServer.h	/^	char* c_cookie; \/\/HTTP_COOKIE$/;"	m	struct:_request_h
+c_length	LightCgiServer.h	/^	unsigned long c_length; \/\/Content-Type,usually for POST$/;"	m	struct:_request_h
+c_referer	LightCgiServer.h	/^	char* c_referer; \/\/Referer,for cgi$/;"	m	struct:_request_h
+c_type	LightCgiServer.h	/^	char* c_type;   \/\/Content-Type,usually for POST$/;"	m	struct:_request_h
+c_uagent	LightCgiServer.h	/^	char* c_uagent; \/\/User-Agent,for cgi$/;"	m	struct:_request_h
+cgi_data	LightCgiServer.h	/^struct cgi_data$/;"	s
+check_dir	LightCgiServer.c	/^int check_dir(FILE* fd,request_h* request_header,struct stat* Stats)$/;"	f
+delete_queue	LightCgiServer.c	/^void delete_queue(queue_t* queue)$/;"	f
+determine_mime	LightCgiServer.c	/^int determine_mime(queue_t* queue,FILE* fd,FILE* content,request_h* request_header)$/;"	f
+disconnect	LightCgiServer.c	/^void disconnect(struct socket_request *socket,FILE *fd,request_h* request_header)$/;"	f
+ext	LightCgiServer.h	/^	char* ext;  \/\/Extension for requested file$/;"	m	struct:_request_h
+fd	LightCgiServer.h	/^	int fd;   \/\/ 读描述符$/;"	m	struct:cgi_data
+fd	LightCgiServer.h	/^	int fd;  \/\/socket 文件描述符$/;"	m	struct:socket_request
+fd2	LightCgiServer.h	/^	int fd2;  \/\/ 写描述符$/;"	m	struct:cgi_data
+filename	LightCgiServer.h	/^	char* filename;    \/\/Filename was received(ie,\/index.html)$/;"	m	struct:_request_h
+free_queue	LightCgiServer.c	/^void free_queue(queue_t* queue)$/;"	f
+from_hex	LightCgiServer.c	/^char from_hex(char c)$/;"	f
+generic_response	LightCgiServer.c	/^void generic_response(FILE* fd,char* status,char* message)$/;"	f
+handleRequest	LightCgiServer.c	/^void *handleRequest(void *socket)$/;"	f
+handleSignal	LightCgiServer.c	/^void handleSignal(int sigNo)$/;"	f
+host	LightCgiServer.h	/^	char* host;  \/\/Hostname for request$/;"	m	struct:_request_h
+http_version	LightCgiServer.h	/^	char* http_version;  \/\/HTTP version used in request$/;"	m	struct:_request_h
+main	LightCgiServer.c	/^int main(int argc,char *argv[])$/;"	f
+parse_html	LightCgiServer.c	/^int parse_html(struct socket_request* socket,queue_t* queue,FILE* fd,request_h* request_header)$/;"	f
+pid	LightCgiServer.h	/^	int pid;  \/\/ Process ID$/;"	m	struct:cgi_data
+pipe_trans	LightCgiServer.c	/^void pipe_trans(queue_t* queue,FILE* fd,FILE* cgi_w,request_h* request_header)$/;"	f
+port	LightCgiServer.c	/^int port;  \/\/默认端口$/;"	v
+processHeader	LightCgiServer.c	/^int processHeader(struct socket_request* socket,queue_t* queue,FILE* fd,int* type_width,request_h* request_header)$/;"	f
+querystring	LightCgiServer.h	/^	char* querystring; \/\/Query String,URL Encoded$/;"	m	struct:_request_h
+queue_append	LightCgiServer.c	/^void queue_append(queue_t *queue,void *value)$/;"	f
+queue_at	LightCgiServer.c	/^void *queue_at(queue_t* queue,unsigned int id)$/;"	f
+queue_size	LightCgiServer.c	/^unsigned int queue_size(queue_t* queue)$/;"	f
+queue_t	LightCgiServer.h	/^}queue_t;$/;"	t	typeref:struct:_queue
+readRequest	LightCgiServer.c	/^int readRequest(struct socket_request* socket,queue_t* queue,FILE *fd,request_h* request_header)$/;"	f
+read_header	LightCgiServer.c	/^int read_header(struct socket_request* socket,queue_t* queue,FILE* fd,FILE* cgi_r,request_h* request_header,pthread_t* waitthread)$/;"	f
+remote_addr	LightCgiServer.h	/^	struct sockaddr_in remote_addr; \/\/远程连接地址$/;"	m	struct:socket_request	typeref:struct:socket_request::sockaddr_in
+request_file	LightCgiServer.c	/^int request_file(struct socket_request* socket,queue_t* queue,FILE* fd,request_h* request_header)$/;"	f
+request_h	LightCgiServer.h	/^}request_h;$/;"	t	typeref:struct:_request_h
+request_type	LightCgiServer.h	/^	int request_type;     \/\/Request type,GET = 0,POST = 1,HEAD = 2...$/;"	m	struct:_request_h
+set_env	LightCgiServer.c	/^int set_env(struct socket_request* socket,queue_t* queue,request_h* request_header)$/;"	f
+size	LightCgiServer.h	/^	unsigned int size;$/;"	m	struct:_queue
+socket_request	LightCgiServer.h	/^struct socket_request$/;"	s
+sockfd	LightCgiServer.c	/^int sockfd; \/\/socket$/;"	v
+thread	LightCgiServer.h	/^	pthread_t thread;	\/\/线程$/;"	m	struct:socket_request
+unsupport	LightCgiServer.c	/^void unsupport(struct socket_request* socket,queue_t* queue,FILE* fd,request_h* request_header)$/;"	f
+wait_pid	LightCgiServer.c	/^void* wait_pid(void* data)$/;"	f

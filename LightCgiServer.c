@@ -763,7 +763,6 @@ int read_header(struct socket_request* socket,queue_t* queue,FILE* fd,FILE* cgi_
 		fflush(fd);
 		delete_queue(queue);
 		
-		// 此处存疑，稍后处理，即返回值，应该继续执行
 		return -1;
 	}
 	// 如果是HTTP/1.0，断开链接
